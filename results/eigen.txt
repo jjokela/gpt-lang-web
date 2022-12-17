@@ -1,0 +1,1 @@
+Eigen translates to own. An example using this word in a sentence would be: "Je hebt je eigen mening." which translates to "You have your own opinion."

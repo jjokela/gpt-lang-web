@@ -1,0 +1,1 @@
+Rust translates to rest. An example using this word in a sentence would be: "Ik heb rust nodig om me te herstellen." which translates to "I need rest to recover."
