@@ -20,6 +20,26 @@
     <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
     <meta name="theme-color" content="#712cf9">
 
+    <style>
+        @media (max-width: 580px) {
+            .word-list {
+                max-height: 60vh;
+            }
+            .card-text {
+                font-size: 1.00rem!important;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 2900px) {
+            .word-list {
+                max-height: 80vh;
+            }
+            .card-text {
+                font-size: 1.25rem!important;
+            }
+        }
+    </style>
+
 </head>
 <body>
 <main>
@@ -60,7 +80,7 @@
         </ul>
 
         <div class="row mb-3 g-0">
-            <div class="col-md-4 overflow-auto" style="height: 70vh; text-transform: capitalize;">
+            <div class="col-md-4 overflow-auto word-list" style="height: 80vh; text-transform: capitalize;">
                 <ul class="list-group">
                     <li id="a" data-index=-1 class="list-group-item fw-bold">a</li>
                     <li id="aan" data-index=1 class="list-group-item">aan</li>
@@ -2061,7 +2081,7 @@
                     <div class="card-body">
                         <h4 class="card-title" style="text-transform: capitalize;"></h4>
                         <h6 class="card-subtitle mb-2 text-muted"></h6>
-                        <p class="card-text fs-5" style="margin-top: 15px;"></p>
+                        <p class="card-text" style="margin-top: 15px;"></p>
                         <div class="text-end card-counter"></div>
                     </div>
                 </div>
