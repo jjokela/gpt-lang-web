@@ -30,33 +30,31 @@
                    style="font-size: 1.5rem;" data-bs-toggle="dropdown" href="#" role="button"
                    aria-expanded="false"></a>
                 <ul class="dropdown-menu">
-                    <select class="form-select" size="25">
-                        <option selected class="letter" value="a">A</option>
-                        <option class="letter" value="b">B</option>
-                        <option class="letter" value="c">C</option>
-                        <option class="letter" value="d">D</option>
-                        <option class="letter" value="e">E</option>
-                        <option class="letter" value="f">F</option>
-                        <option class="letter" value="g">G</option>
-                        <option class="letter" value="h">H</option>
-                        <option class="letter" value="i">I</option>
-                        <option class="letter" value="j">J</option>
-                        <option class="letter" value="k">K</option>
-                        <option class="letter" value="l">L</option>
-                        <option class="letter" value="m">M</option>
-                        <option class="letter" value="n">N</option>
-                        <option class="letter" value="o">O</option>
-                        <option class="letter" value="p">P</option>
-                        <option class="letter" value="q">Q</option>
-                        <option class="letter" value="r">R</option>
-                        <option class="letter" value="s">S</option>
-                        <option class="letter" value="t">T</option>
-                        <option class="letter" value="u">U</option>
-                        <option class="letter" value="v">V</option>
-                        <option class="letter" value="w">W</option>
-                        <option class="letter" value="z">Z</option>
-                        <option class="letter" value="é">É</option>
-                    </select>
+                    <li><a class="dropdown-item" href="#a">A</a></li>
+                    <li><a class="dropdown-item" href="#b">B</a></li>
+                    <li><a class="dropdown-item" href="#c">C</a></li>
+                    <li><a class="dropdown-item" href="#d">D</a></li>
+                    <li><a class="dropdown-item" href="#e">E</a></li>
+                    <li><a class="dropdown-item" href="#f">F</a></li>
+                    <li><a class="dropdown-item" href="#g">G</a></li>
+                    <li><a class="dropdown-item" href="#h">H</a></li>
+                    <li><a class="dropdown-item" href="#i">I</a></li>
+                    <li><a class="dropdown-item" href="#j">J</a></li>
+                    <li><a class="dropdown-item" href="#k">K</a></li>
+                    <li><a class="dropdown-item" href="#l">L</a></li>
+                    <li><a class="dropdown-item" href="#m">M</a></li>
+                    <li><a class="dropdown-item" href="#n">N</a></li>
+                    <li><a class="dropdown-item" href="#o">O</a></li>
+                    <li><a class="dropdown-item" href="#p">P</a></li>
+                    <li><a class="dropdown-item" href="#q">Q</a></li>
+                    <li><a class="dropdown-item" href="#r">R</a></li>
+                    <li><a class="dropdown-item" href="#s">S</a></li>
+                    <li><a class="dropdown-item" href="#t">T</a></li>
+                    <li><a class="dropdown-item" href="#u">U</a></li>
+                    <li><a class="dropdown-item" href="#v">V</a></li>
+                    <li><a class="dropdown-item" href="#w">W</a></li>
+                    <li><a class="dropdown-item" href="#z">Z</a></li>
+                    <li><a class="dropdown-item" href="#é">É</a></li>
                 </ul>
             </li>
         </ul>
@@ -2100,22 +2098,12 @@
             }
         });
 
-        $('.letter').click(function (e) {
+        $('.dropdown-item').click(function (e) {
             $('.card-title').html('');
             $('.card-text').html('');
             $('.card-counter').html('');
         });
-
-        $('.letter').click(function (e) {
-            $that = $(this);
-            let letter = $that.val();
-            console.log(letter);
-            location.href = `#${letter}`;
-
-            $('.dropdown-toggle').dropdown('toggle')
-        });
     })
 </script>
-
 </body>
 </html>
