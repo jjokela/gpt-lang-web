@@ -25,8 +25,9 @@
             .word-list {
                 max-height: 50vh;
             }
+
             .card-text {
-                font-size: 1.00rem!important;
+                font-size: 1.00rem !important;
             }
         }
 
@@ -34,8 +35,9 @@
             .word-list {
                 max-height: 80vh;
             }
+
             .card-text {
-                font-size: 1.25rem!important;
+                font-size: 1.25rem !important;
             }
         }
     </style>
@@ -2082,7 +2084,11 @@
                         <h4 class="card-title" style="text-transform: capitalize;"></h4>
                         <h6 class="card-subtitle mb-2 text-muted"></h6>
                         <p class="card-text" style="margin-top: 15px;"></p>
-                        <div class="text-end card-counter"></div>
+                        <div>
+                            <i class="bi bi-arrow-left-circle-fill" style="font-size: 2.0rem;"></i>
+                            <i class="bi bi-arrow-right-circle-fill" style="font-size: 2.0rem;"></i>
+                        </div>
+                        <p class="card-counter text-end" style="margin-top: -55px;"></p>
                     </div>
                 </div>
             </div>
@@ -2107,10 +2113,9 @@
             let element_id = $that.attr('id');
             let index = $that.attr('data-index');
 
-            if (index !== -1) {
+            if (index != -1) {
                 $.get(`results/${element_id}.txt`, function (data) {
-                    console.log(data);
-                    // 1967
+                    //console.log(data);
                     $('.card-title').html(element_id);
                     $('.card-text').html(data);
                     $('.card-counter').html(`${index} / 1967`);
@@ -2122,6 +2127,24 @@
             $('.card-title').html('');
             $('.card-text').html('');
             $('.card-counter').html('');
+        });
+
+        $('.bi-arrow-left-circle-fill').click(function (e) {
+            let current_data_index = $('.list-group li.active').attr('data-index');
+            if (current_data_index > 0) {
+                let next_data_index = parseInt(current_data_index) - 1;
+                let next_list_item = $(`.list-group li[data-index=${next_data_index}]`);
+                next_list_item.trigger("click")
+            }
+        });
+
+        $('.bi-arrow-right-circle-fill').click(function (e) {
+            let current_data_index = $('.list-group li.active').attr('data-index');
+            if (current_data_index < 1967) {
+                let next_data_index = parseInt(current_data_index) + 1;
+                let next_list_item = $(`.list-group li[data-index=${next_data_index}]`);
+                next_list_item.trigger("click")
+            }
         });
     })
 </script>
