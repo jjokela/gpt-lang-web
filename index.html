@@ -24,6 +24,10 @@
             .card-text {
                 font-size: 1.00rem !important;
             }
+
+            .search-form {
+                display: none;
+            }
         }
 
         @media (min-width: 800px) and (max-width: 2900px) {
@@ -75,7 +79,7 @@
                 </ul>
             </li>
             <li>
-                <form role="search">
+                <form class="search-form" role="search">
                     <input id="search-input" type="search" class="form-control form-control-dark"
                            placeholder="Search..."
                            aria-label="Search" style="height: 30px;">
