@@ -2156,18 +2156,19 @@
         $("#search-input").on("keyup", function () {
             var value = $(this).val().toLowerCase();
 
-            $(".list-group li").filter(function () {
-                let $this = $(this);
-                $this.toggle($this.attr('id').startsWith(value));
-            });
+            if (value.length === 0) {
+                $('.list-group li').show();
+            } else {
+                $(".list-group li").filter(function () {
+                    let $this = $(this);
+                    $this.toggle($this.attr('id').startsWith(value));
+                });
+            }
         });
 
         $("#search-input").on("search", function () {
-            // toggle all .list-group li items visible
-            $(".list-group li").filter(function () {
-                let $this = $(this);
-                $this.toggle(true);
-            });
+            // toggle .list-group items visible
+            $(".list-group li").show();
         });
     })
 </script>
