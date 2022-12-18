@@ -2155,7 +2155,8 @@
         $("#search-input").on("keyup", function () {
             var value = $(this).val().toLowerCase();
             $(".list-group li").each(function () {
-                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                let $this = $(this);
+                $this.toggle($this.text().indexOf(value) > -1)
             });
         });
     })
