@@ -2161,6 +2161,14 @@
                 $this.toggle($this.attr('id').startsWith(value));
             });
         });
+
+        $("#search-input").on("search", function () {
+            // toggle all .list-group li items visible
+            $(".list-group li").filter(function () {
+                let $this = $(this);
+                $this.toggle(true);
+            });
+        });
     })
 </script>
 </body>
