@@ -81,8 +81,8 @@
             </li>
         </ul>
 
-        <div class="row mb-3 g-0">
-            <div class="col-md-4 overflow-auto word-list" style="height: 80vh; text-transform: capitalize;">
+        <div class="row g-0">
+            <div class="col-sm-2 col-md-3 overflow-auto word-list" style="height: 80vh; text-transform: capitalize;">
                 <ul class="list-group">
                     <li id="a" data-index=-1 class="list-group-item fw-bold">a</li>
                     <li id="aan" data-index=1 class="list-group-item">aan</li>
@@ -1304,7 +1304,7 @@
                     <li id="pasen" data-index=1202 class="list-group-item">pasen</li>
                     <li id="passen" data-index=1203 class="list-group-item">passen</li>
                     <li id="pastoor" data-index=1204 class="list-group-item">pastoor</li>
-                    <li id="patiã«nt" data-index=1205 class="list-group-item">patiã«nt</li>
+                    <li id="patiënt" data-index=1205 class="list-group-item">patiënt</li>
                     <li id="peinzen" data-index=1206 class="list-group-item">peinzen</li>
                     <li id="pen" data-index=1207 class="list-group-item">pen</li>
                     <li id="per" data-index=1208 class="list-group-item">per</li>
@@ -2078,13 +2078,13 @@
                     <li id="één" data-index=1967 class="list-group-item">één</li>
                 </ul>
             </div>
-            <div class="col-md-8">
+            <div class="col-sm-10 col-md-8">
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title" style="text-transform: capitalize;"></h4>
                         <h6 class="card-subtitle mb-2 text-muted"></h6>
                         <p class="card-text" style="margin-top: 15px;"></p>
-                        <div>
+                        <div class="nav-buttons">
                             <i class="bi bi-arrow-left-circle-fill" style="font-size: 2.0rem;"></i>
                             <i class="bi bi-arrow-right-circle-fill" style="font-size: 2.0rem;"></i>
                         </div>
@@ -2104,6 +2104,7 @@
 <script>
     $(function () {
         console.log('ready');
+        $('.nav-buttons').hide();
 
         $('.list-group li').click(function (e) {
             e.preventDefault()
@@ -2119,6 +2120,7 @@
                     $('.card-title').html(element_id);
                     $('.card-text').html(data);
                     $('.card-counter').html(`${index} / 1967`);
+                    $('.nav-buttons').show();
                 });
             }
         });
@@ -2127,6 +2129,7 @@
             $('.card-title').html('');
             $('.card-text').html('');
             $('.card-counter').html('');
+            $('.nav-buttons').hide();
         });
 
         $('.bi-arrow-left-circle-fill').click(function (e) {
